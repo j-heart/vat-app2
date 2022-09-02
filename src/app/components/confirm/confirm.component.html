@@ -1,0 +1,51 @@
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body> 
+
+    <div class="container">
+        <div class="panel panel-default">
+        <div class="panel-body">
+
+            <h3>Tax Filing Detail</h3>
+
+            <p>Type of filling = {{_finaldataservice.filingType}}</p>
+            <p>VAT Month = {{_finaldataservice.month}}  {{_finaldataservice.year}}</p>
+
+            <h3>Tax Computation</h3>
+
+            <p>Total value of taxable electronic service exclusive of VAT = {{_finaldataservice.saleAmount}} </p><br>
+            <p>Total VAT to be remiited = {{_finaldataservice.taxAmount}}</p>
+            <p>(7% of Total value of taxable electronic service exclusive of VAT)</p><br>
+            <p>Total Amount Payable = {{_finaldataservice.totalAmount}}</p><br>
+
+            <h3>Declaration</h3>
+            <p>I hereby certify that information given above are true and correct and agree to be bound by such information</p>
+        </div>
+        </div>
+    </div>
+    <div class="center"><button style="display:block; margin: 0 auto;" type="button" class="button-63" (click)="openModal()">Confirm and Submit</button></div>
+    <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+         <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                     <div class="modal-header">
+                           <h4 class="modal-title">TaxData</h4>
+                           <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                         </div>
+                <div class="modal-body">
+                    <pre> {{ _finaldataservice | json }} </pre> 
+                         </div>
+                     <div class="modal-footer">
+                           <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+                         </div>
+            </div>
+             </div>
+ </div>
+      
+</body>

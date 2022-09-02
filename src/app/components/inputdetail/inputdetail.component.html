@@ -1,0 +1,59 @@
+<br>
+<br>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body> 
+   
+    <div class="container">
+        <div class="panel panel-default">
+        <div class="panel-body">
+
+            <h3>1.Tax Filing Detail</h3>
+            <p>______________________________________________________________________________________________________________________________________________</p>
+
+            <div class="Type Filling">
+                <mat-radio-group>
+                    <mat-radio-button style="margin-right: 50px;" value="Ordinary Filling" name="Ordinary Filling" (click)="setResult('0')" (click)="setFilingType('Ordinary Filling')" checked>Ordinary Filling</mat-radio-button>
+                    <mat-radio-button value="Additional Filling" name="Additional Filling" (click)="setResult('1')" (click)="setFilingType('Additional Filling')">Additional Filling</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+
+            <p>VAT Month</p>
+            <div style="display: flex">
+                <app-month style="margin-right: 50px"></app-month>
+                <app-year></app-year>
+            </div>
+
+            <h3>2.Tax Computation</h3>
+            <p>______________________________________________________________________________________________________________________________________________</p>
+            <p class="description">Provide total value taxable electronic service</p>
+
+            <div class="VAT">
+                <p>1.Total value of taxable electronic service exclusive of VAT <app-sale-amount style="justify-content: right"></app-sale-amount></p>
+                <p>2.Total VAT to be remitted (7% of 1) <app-tax-amount></app-tax-amount></p>
+            </div>
+            
+            <div class="Late_Filling" [hidden]="(typeResult == '0' )">
+                <p class="description">In case of late filling and payment, or additional filling</p>
+                <p>3.Surcharge <app-surcharge></app-surcharge></p>
+                <p>4.Penalty <app-penalty></app-penalty></p>
+                <p>3.Total amount of VAT,Surcharge, and Penalty to be remitted(2 + 3 + 4) <app-total-amount></app-total-amount></p>
+            </div>
+        </div>
+        </div>
+    </div> 
+
+    <div class="a">
+    <button style="margin-right: 50px;" class="button-63" type="button" routerLink="input">Back</button>
+    <button class="button-63"  type="button" routerLink="confirm">Next</button>
+    </div>
+
+</body>
