@@ -8,6 +8,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body> 
+    
+    <div class="stepper-wrapper">
+        <div class="stepper-item complete">
+          <div class="step-counter">1</div>
+          <div class="step-name">Input Tax</div>
+        </div>
+        <div class="stepper-item active ">
+          <div class="step-counter incomplete">2</div>
+          <div class="step-name">Confirm & Review</div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="panel panel-default">
@@ -30,7 +41,7 @@
         </div>
         </div>
     </div>
-    <div class="center"><button style="display:block; margin: 0 auto;" type="button" class="button-63" (click)="openModal()">Confirm and Submit</button></div>
+    <div class="center"><button style="display:block; margin: 0 auto;" type="button" class="btn btn-dark mr-3" (click)="openModal()">Confirm and Submit</button></div>
     <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
          <div class="modal-dialog" role="document">
                <div class="modal-content">

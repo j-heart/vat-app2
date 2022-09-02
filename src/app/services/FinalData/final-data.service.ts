@@ -13,7 +13,7 @@ export class FinalDataService {
   public saleAmount: number = 0.00;
   public taxAmount: number = 0.00;
   public surcharge: number = 0.00;
-  public penalty: number = 200.00;
+  public penalty: number = 0.00;
   public totalAmount: number = 0.00;
 
 }

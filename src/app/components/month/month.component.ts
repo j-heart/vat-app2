@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FinalDataService } from 'src/app/services/FinalData/final-data.service';
-import {DataFinal} from '../../data-final.model'
 
 @Component({
   selector: 'app-month',
@@ -13,6 +12,7 @@ export class MonthComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   value: any = '';
 
   setMonth(Month: string) {

@@ -26,4 +26,11 @@ export class InputdetailComponent implements OnInit {
     this._finaldataservice.filingType = string;
   }
   
+  setPenalty(num: number) {
+    this._finaldataservice.penalty = num;
+  }
+
+  setSurcharge(num: number) {
+    this._finaldataservice.surcharge = num;
+  }
 }

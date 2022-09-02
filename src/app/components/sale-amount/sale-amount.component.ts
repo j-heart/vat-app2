@@ -14,7 +14,7 @@ export class SaleAmountComponent implements OnInit {
   }
 
   setSaleAmount(val: string) {
-    var num = Number(val);
+    let num = Number(val);
     this.Shit = num.toFixed(2);
     num = Number(this.Shit)
     this._finaldataservice.saleAmount = num;    
@@ -43,5 +43,15 @@ export class SaleAmountComponent implements OnInit {
     let num = (this._finaldataservice.taxAmount + this._finaldataservice.surcharge + this._finaldataservice.penalty);
     num = Number(num);
     this._finaldataservice.totalAmount = num;
+  }
+
+  OnlyNumberAllowed(event: any):boolean{
+    const charCode = (event.which)?event.which: event.keyCode;
+
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+      console.log(charCode);
+      return false;
+    }
+    return true;
   }
 }

@@ -1,1 +1,1 @@
-<input class="w" #num type="text" step=".01" id="Sale" ng-model='val | number: 2' placeholder="THB" (keyup)="setSaleAmount(num.value)" (keyup)="setTaxAmount(num.value)" (keyup)="setsurcharge()" (keyup)="setTotal()"> 
+<input class="form-control cb" style="text-align: right;" #num type="number" step=".01" id="Sale" ng-model='val | number: 2' placeholder="THB" (keypress)="OnlyNumberAllowed($event)" (keyup)="setSaleAmount(num.value)" (keyup)="setTaxAmount(num.value)" (keyup)="setsurcharge()" (keyup)="setTotal()"> 
