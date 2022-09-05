@@ -32,8 +32,8 @@
             <br>
             <div class="Type Filling">
                 <mat-radio-group>
-                    <mat-radio-button style="margin-right: 50px;" value="Ordinary Filling" name="Ordinary Filling" (click)="setResult('0')" (click)="setFilingType('Ordinary Filling')" (click)="setPenalty(0)" (click)="setSurcharge(0.00)" checked>Ordinary Filling</mat-radio-button>
-                    <mat-radio-button value="Additional Filling" name="Additional Filling" (click)="setResult('1')" (click)="setFilingType('Additional Filling')" (click)="setPenalty(200)">Additional Filling</mat-radio-button>
+                    <mat-radio-button style="margin-right: 50px;" value="Ordinary Filling" name="Ordinary Filling" (click)="setResult('0')" (click)="setFilingType('Ordinary Filling')" (click)="setPenalty(0)" (click)="setSurcharge(0.00)" checked>Ordinary Filling<mat-icon>contact_support</mat-icon></mat-radio-button>
+                    <mat-radio-button value="Additional Filling" name="Additional Filling" (click)="setResult('1')" (click)="setFilingType('Additional Filling')" (click)="setPenalty(200)">Additional Filling<mat-icon>contact_support</mat-icon></mat-radio-button>
                 </mat-radio-group>
             </div>
             <br>
@@ -75,8 +75,8 @@
             <br>
             <div class="Late_Filling" [hidden]="(typeResult == '0' )">
                 <p class="description">In case of late filling and payment, or additional filling</p>
-                <div class="VAT"><p>3.Surcharge </p><app-surcharge></app-surcharge></div><br>
-                <div class="VAT"><p>4.Penalty </p><app-penalty></app-penalty></div><br>
+                <div class="VAT"><p>3.Surcharge<mat-icon>contact_support</mat-icon> </p><app-surcharge></app-surcharge></div><br>
+                <div class="VAT"><p>4.Penalty<mat-icon>contact_support</mat-icon> </p><app-penalty></app-penalty></div><br>
                 <div class="VAT"><p>3.Total amount of VAT,Surcharge, and Penalty to be remitted(2 + 3 + 4) </p><app-total-amount></app-total-amount></div><br>
             </div>
         </div>
