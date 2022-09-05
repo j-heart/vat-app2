@@ -6,11 +6,11 @@ import { InputdetailComponent } from './components/inputdetail/inputdetail.compo
 const routes: Routes = [
   
   {
-    path: 'input',
+    path: '',
     component: InputdetailComponent
   },
   {
-    path: 'input/confirm',
+    path: 'confirm',
     component: ConfirmComponent
   }
 ];
